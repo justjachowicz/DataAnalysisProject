@@ -1,0 +1,37 @@
+{
+  "reset_db": "False",
+  "csv_files": {
+    "bipolar_disorder": "bipolarDisorder",
+    "depression": "depression",
+    "eating_disorder": "eatingDisorder",
+    "life_quality": "life_quality",
+    "schizophrenia": "schizophrenia"
+  },
+  "countries": [
+      "Austria",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Bulgaria",
+      "Croatia",
+      "Czechia",
+      "France",
+      "Germany",
+      "Greece",
+      "Hungary",
+      "Ireland",
+      "Italy",
+      "Netherlands",
+      "Norway",
+      "Poland",
+      "Portugal",
+      "Romania",
+      "Russia",
+      "Serbia",
+      "Slovenia",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Ukraine",
+      "United Kingdom"
+    ]
+}
