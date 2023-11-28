@@ -1,11 +1,292 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
-</head>
-<body>
-Home Page
+{% extends 'layout.html' %}
 
-</body>
-</html>
+{% block body %}
+
+    <div class="card px-4 text-center">
+        <div class="card-body fs-4">
+            Choose a disorder for which you wish to see detailed analysis
+        </div>
+    </div>
+
+
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bipolar disorder</h5>
+                    <a href="{{ url_for('views.disorder_page', disorder='bipolar disorder') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Depression</h5>
+                    <a href="{{ url_for('views.disorder_page', disorder='depression') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Eating disorder</h5>
+                    <a href="{{ url_for('views.disorder_page', disorder='eating disorder') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Schizophrenia</h5>
+                    <a href="{{ url_for('views.disorder_page', disorder='schizophrenia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="card px-4 text-center">
+        <div class="card-body fs-4">
+            Choose a country to see aggregate analysis
+        </div>
+    </div>
+
+
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6">
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Austria</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'austria') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Belgium</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'belgium') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bosnia and Herzegovina</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'bosnia and herzegovina') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bulgaria</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'bulgaria') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Croatia</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'croatia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Czechia</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'czechia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">France</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'france') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Germany</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'germany') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Greece</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'greece') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Hungary</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'hungary') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ireland</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'ireland') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Italy</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'italy') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Netherlands</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'netherlands') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Norway</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'norway') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Poland</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'poland') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Portugal</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'portugal') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Romania</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'romania') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Russia</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'russia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Serbia</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'serbia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Slovenia</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'slovenia') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Spain</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'spain') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sweden</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'sweden') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Switzerland</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'switzerland') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ukraine</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'ukraine') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">United Kingdom</h5>
+                    <a href="{{ url_for('views.aggregate_analysis', country = 'united kingdom') }}" class="btn btn-outline-secondary">See more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
