@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="card px-4 text-center">
+        <div class="card-body fs-2">
+            Aggregate analysis for {{ country.title() }}
+        </div>
+    </div>
+
+    <div>
+        <img src="{{ url_for('static', filename='heatmap.png') }}" class="rounded mx-auto d-block">
+
+{#        <img src="{{ url_for('views.createHeatMap', country = country) }}" class="rounded mx-auto d-block">#}
+    </div>
+
+{% endblock %}

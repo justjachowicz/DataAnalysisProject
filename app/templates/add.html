@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="card px-4 text-center">
+        <div class="card-body fs-2">
+            Add data to database
+        </div>
+    </div>
+
+
+    <form action="{{ url_for("data.add")}}" method="post">
+        <div class="container px-4">
+
+            <div class="col-md-6 p-3">
+            <label for="table" class="form-label">Table</label>
+            <select name='table' id="table" class="form-select">
+                <option selected>Choose table</option>
+                <option value="life_quality">Life quality</option>
+                <option value="bipolarDisorder">Bipolar disorder</option>
+                <option value="depression">Depression</option>
+                <option value="eatingDisorder">Eating disorder</option>
+                <option value="schizophrenia">Schizophrenia</option>
+            </select>
+            </div>
+
+            <div class="col-md-6 p-3">
+                <label for="country" class="form-label">Country</label>
+                <input name='country' type="text" class="form-control" id="country">
+            </div>
+
+            <div class="col-md-6 p-3">
+                <label for="year" class="form-label">Year</label>
+                <input name='year'  type="text" class="form-control" id="year">
+            </div>
+
+            <div class="col-md-6 p-3">
+                <label for="index" class="form-label">Index</label>
+                <input name='index' type="text" class="form-control" id="index">
+            </div>
+
+            <div class="p-3">
+                <button type="submit" class="btn btn-outline-secondary">Submit</button>
+            </div>
+
+        </div>
+    </form>
+
+{% endblock %}
