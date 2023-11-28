@@ -15,6 +15,12 @@ def create_app():
     from app.config.configGetter import get_db_state
     db_state = get_db_state()
 
+    from .views import views
+    app.register_blueprint(views, url_prefix='/views')
+
+    from .data import data
+    app.register_blueprint(data, url_prefix='/data')
+
     @app.route('/')
     def hello():
         """
