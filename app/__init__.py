@@ -13,7 +13,7 @@ def create_app():
     db.init_app(app)
 
     from app.config.configGetter import get_db_state
-    db_state = get_db_state()
+    reset_db_state = get_db_state()
 
     from .views import views
     app.register_blueprint(views, url_prefix='/views')
@@ -27,7 +27,7 @@ def create_app():
         check configuration settings and reset database if needed
         :return: index page
         """
-        if db_state == 'True':
+        if reset_db_state == 'True':
             conn = db.get_db()
             db.init_db()
             db.fill_db(conn)

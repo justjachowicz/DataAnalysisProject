@@ -3,20 +3,19 @@
 {% block body %}
 
     <div class="card px-4 text-center">
-        <div class="card-body fs-2">
+        <div class="card-body fs-5">
             {{ disorder.title() }} in {{ country.title() }}
         </div>
     </div>
 
 
     <div>
-{#        <img src="{{ url_for('views.createPlot', country = country, disorder=disorder) }}" class="rounded mx-auto d-block">#}
         <img src="{{ url_for('static', filename='linear_plot.png') }}" class="rounded mx-auto d-block">
     </div>
 
 
     <div class="card px-4 my-4 text-center">
-        <div class="card-body fs-2">
+        <div class="card-body fs-6">
             Correlation coefficient: {{ corr_coefficient }}
         </div>
     </div>
@@ -24,13 +23,12 @@
 
 
     <div class="card my-4 text-center">
-        <div class="card-body fs-2">
+        <div class="card-body fs-6">
             Linear regression plot
         </div>
     </div>
 
     <div>
-{#        <img src="{{ regression_plot_path }}" alt="Wykres regresji liniowej">#}
         <img src="{{ url_for('static', filename='regression_plot.png') }}" class="rounded mx-auto d-block">
     </div>
 

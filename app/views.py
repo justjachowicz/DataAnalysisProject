@@ -119,17 +119,17 @@ def create_linear_graph(country, disorder):
 
     fig, ax1 = plt.subplots(figsize=(8, 4))
 
-    ax1.plot(years, life_quality, color='blue', label='Life quality')
+    ax1.plot(years, life_quality, color='black', label='Life quality')
     ax1.grid(False)
     ax1.set_xlabel('Year')
-    ax1.set_ylabel('Life quality', color='blue')
-    ax1.tick_params(axis='y', labelcolor='blue')
+    ax1.set_ylabel('Life quality', color='black')
+    ax1.tick_params(axis='y', labelcolor='black')
 
     ax2 = ax1.twinx()
-    ax2.plot(years, disorder_prevalence, color='red', label=f'{disorder.title()} index')
+    ax2.plot(years, disorder_prevalence, color='royalblue', label=f'{disorder.title()} index')
     ax2.grid(False)
-    ax2.set_ylabel(f'{disorder.title()}  index', color='red')
-    ax2.tick_params(axis='y', labelcolor='red')
+    ax2.set_ylabel(f'{disorder.title()}  index', color='royalblue')
+    ax2.tick_params(axis='y', labelcolor='royalblue')
     plt.subplots_adjust(bottom=0.15,)
     plt.title(f'Life quality index and {disorder} prevalence rate in {country.title()} (2012-2019)')
 
@@ -178,6 +178,7 @@ def correlation_coefficient(country, disorder):
     merged_df = disorder_df.merge(life_quality_df, on=['country', 'year'])
 
     corr_coefficient = merged_df['life_quality'].corr(merged_df[disorder_index])
+    corr_coefficient = round(corr_coefficient, 2)
 
     return corr_coefficient
 
@@ -259,7 +260,7 @@ def create_heat_map(country):
             'schizophrenia_index': 'schizophrenia'
         })
 
-    fig, ax1 = plt.subplots(figsize=(12, 8))
+    fig, ax1 = plt.subplots(figsize=(10, 6))
     sb.heatmap(final_df.corr(), cmap="YlGnBu", annot=True)
     ax1.grid(False)
     plt.title('Correlation heatmap')

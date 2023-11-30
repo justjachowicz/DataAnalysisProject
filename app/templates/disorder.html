@@ -3,7 +3,11 @@
 {% block body %}
 
     <div class="card px-4 my-4 text-center">
-        <h3 class="display-6">{{ disorder.title() }}</h3>
+        <div class="card-body fs-5">
+            {{ disorder.title() }}
+        </div>
+    </div>
+    <div class="card px-4 my-4 text-center">
         <div class="card-body fs-6">
             Number of countries with positive correlation coefficient greater than 0.7: {{ number_countries_pos_corr }}
         </div>
