@@ -261,7 +261,8 @@ def create_heat_map(country):
         })
 
     fig, ax1 = plt.subplots(figsize=(10, 6))
-    sb.heatmap(final_df.corr(), cmap="YlGnBu", annot=True)
+    corr_matrix = final_df.corr()
+    sb.heatmap(corr_matrix, cmap="YlGnBu", annot=True)
     ax1.grid(False)
     plt.title('Correlation heatmap')
 
